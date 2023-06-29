@@ -1,6 +1,6 @@
 module github.com/azureossd/container-apps-cicd-examples/azure-devops
 
-go 1.19
+go 1.20
 
 require (
 	github.com/andybalholm/brotli v1.0.5 // indirect
