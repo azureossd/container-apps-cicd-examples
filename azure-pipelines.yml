@@ -29,6 +29,6 @@ stages:
           containerAppName: 'ansalemo-azure-devops'
           resourceGroup: 'ansalemo-rg'
           containerAppEnvironment: 'ansalemo-caenv'
-          runtimeStack: 'GO|1.19'
+          runtimeStack: 'GO:1.19'
           targetPort: '3000'
           location: 'eastus'
