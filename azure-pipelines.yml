@@ -29,7 +29,7 @@ stages:
           containerAppName: 'ansalemo-azure-devops'
           resourceGroup: 'ansalemo-rg'
           containerAppEnvironment: 'ansalemo-caenv'
-          runtimeStack: 'php:8.3'
+          runtimeStack: 'php:8.2'
           targetPort: '8080'
           ingress: 'external'
           location: 'eastus'
