@@ -15,15 +15,14 @@ stages:
     steps:
       - task: AzureContainerApps@1
         inputs:
-          appSourcePath: '$(System.DefaultWorkingDirectory)'
-          azureSubscription: 'somesub-or-serviceconnection'
+          azureSubscription: 'some-subscription-or-service-connection'
           acrName: 'someacr'
-          acrUsername: 'someacracr'
-          acrPassword: 'someacrpassword'
-          imageToBuild: 'someoacr.azurecr.io/some-aca-ado:latest'
+          acrUsername: 'someacr'
+          acrPassword: 'someacrpass'
+          imageToDeploy: 'someacr.azurecr.io/someimage:latest'
           containerAppName: 'some-azure-devops'
           resourceGroup: 'some-rg'
           containerAppEnvironment: 'some-caenv'
-          runtimeStack: 'php:8.2'
-          targetPort: '8080'
+          targetPort: '8000'
+          ingress: 'external'
           location: 'eastus'
