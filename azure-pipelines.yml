@@ -20,13 +20,13 @@ stages:
     steps:
       - task: AzureContainerApps@1
         inputs:
+          appSourcePath: '$(System.DefaultWorkingDirectory)'
           dockerFilePath: '$(System.DefaultWorkingDirectory)/test'
           azureSubscription: 'Ansalemo(4388fa06-bf66-4497-82c2-991ba75ecb97)'
           acrName: 'ansalemoacr'
           acrUsername: 'ansalemoacr'
           acrPassword: 'MhhPJHD6nvai0INncrFtSbzg35eEtodKLyTyvloR0x+ACRCfyHm6'
           imageToBuild: 'ansalemoacr.azurecr.io/ansalemo-aca-ado-php:v2'
-          imageToDeploy: 'ansalemoacr.azurecr.io/ansalemo-aca-ado-php:v2'
           containerAppName: 'ansalemo-azure-devops'
           resourceGroup: 'ansalemo-rg'
           containerAppEnvironment: 'ansalemo-caenv'
