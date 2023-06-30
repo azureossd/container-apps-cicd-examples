@@ -51,4 +51,4 @@ stages:
         azureSubscription: 'Ansalemo(4388fa06-bf66-4497-82c2-991ba75ecb97)'
         scriptType: 'bash'
         scriptLocation: 'inlineScript'
-        inlineScript: 'az containerapp up -n ansalemo-azure-devops --image $(containerRegistry)/$(imageRepository):$(tag) --ingress external --target-port 80 --environment ansalemo-acaenv ----registry-username "ansalemoacr" --registry-password "MhhPJHD6nvai0INncrFtSbzg35eEtodKLyTyvloR0x+ACRCfyHm6"'
+        inlineScript: 'az containerapp up -n ansalemo-azure-devops --image $(containerRegistry)/$(imageRepository):$(tag) --ingress external --target-port 80 --environment ansalemo-acaenv --registry-username "ansalemoacr" --registry-password "MhhPJHD6nvai0INncrFtSbzg35eEtodKLyTyvloR0x+ACRCfyHm6"'
