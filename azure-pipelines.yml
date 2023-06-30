@@ -21,7 +21,7 @@ stages:
       - task: AzureContainerApps@1
         inputs:
           appSourcePath: '$(System.DefaultWorkingDirectory)'
-          dockerFilePath: './test'
+          dockerFilePath: './test/Dockerfile'
           azureSubscription: 'Ansalemo(4388fa06-bf66-4497-82c2-991ba75ecb97)'
           acrName: 'ansalemoacr'
           acrUsername: 'ansalemoacr'
