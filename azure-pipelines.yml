@@ -26,6 +26,7 @@ stages:
           acrUsername: 'ansalemoacr'
           acrPassword: 'MhhPJHD6nvai0INncrFtSbzg35eEtodKLyTyvloR0x+ACRCfyHm6'
           imageToBuild: 'ansalemoacr.azurecr.io/ansalemo-aca-ado-php:latest'
+          imageToDeploy: 'ansalemoacr.azurecr.io/ansalemo-aca-ado-php:latest'
           containerAppName: 'ansalemo-azure-devops'
           resourceGroup: 'ansalemo-rg'
           containerAppEnvironment: 'ansalemo-caenv'
