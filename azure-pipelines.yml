@@ -4,8 +4,8 @@
 # https://aka.ms/yaml
 
 trigger:
-- master
-
+  - master
+  
 variables:
   vmImageName: 'ubuntu-latest'
 
@@ -20,16 +20,15 @@ stages:
     steps:
       - task: AzureContainerApps@1
         inputs:
-          appSourcePath: '$(System.DefaultWorkingDirectory)'
+          dockerfilePath: '$(System.DefaultWorkingDirectory)'
           azureSubscription: 'Ansalemo(4388fa06-bf66-4497-82c2-991ba75ecb97)'
           acrName: 'ansalemoacr'
           acrUsername: 'ansalemoacr'
           acrPassword: 'MhhPJHD6nvai0INncrFtSbzg35eEtodKLyTyvloR0x+ACRCfyHm6'
-          imageToBuild: 'ansalemoacr.azurecr.io/ansalemo-aca-ado:latest'
+          imageToBuild: 'ansalemoacr.azurecr.io/ansalemo-aca-ado-php:latest'
           containerAppName: 'ansalemo-azure-devops'
           resourceGroup: 'ansalemo-rg'
           containerAppEnvironment: 'ansalemo-caenv'
-          runtimeStack: 'node:16'
-          targetPort: '3000'
+          targetPort: '8080'
           ingress: 'external'
-          location: 'eastus'
+          location: 'eastus'  

@@ -1,0 +1,35 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+variables:
+  vmImageName: 'ubuntu-latest'
+
+stages:
+- stage: Build
+  displayName: Build and push stage
+  jobs:
+  - job: Build
+    displayName: Build
+    pool:
+      vmImage: $(vmImageName)
+    steps:
+      - task: AzureContainerApps@1
+        inputs:
+          appSourcePath: '$(System.DefaultWorkingDirectory)'
+          azureSubscription: 'somesubscription'
+          acrName: 'someacr'
+          acrUsername: 'someacr'
+          acrPassword: 'someacrpassword'
+          imageToBuild: 'someacr.azurecr.io/some-aca-ado:latest'
+          containerAppName: 'some-azure-devops'
+          resourceGroup: 'some-rg'
+          containerAppEnvironment: 'some-caenv'
+          runtimeStack: 'node:16'
+          targetPort: '3000'
+          ingress: 'external'
+          location: 'eastus'
