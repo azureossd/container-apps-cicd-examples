@@ -1,4 +1,4 @@
-FROM php:8.5.11-apache
+FROM php:8.5.12-apache
 
 COPY index.php /var/www/html/
 COPY init_container.sh /opt/
